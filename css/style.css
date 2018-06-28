@@ -1,1 +1,50 @@
-/* YeyeYeee código aquí */
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: gray;
+    text-align:center;
+    color: white;
+    font-weight:bold;
+}
+input {
+    background-color: white;
+    color: black
+}
+input[type="submit"]{
+    background-color:orange;
+}
+    
+    a:link, a:visited{
+        text-decoration:none;
+        color:orange;
+        font-weight:bold;
+    }
+    a:hover{
+        color:black;
+    }
+    nav ul{
+        list-style-type:none;
+        padding:0;
+    }
+    nav li{
+        display:inline-block;
+        
+    }
+    nav a:link, nav a:visited{
+        background-color:orange;
+        color:white;
+        display:inline-block;
+        width:160px;
+        padding:10px 0;
+    }
+    nav a:hover{
+        background-color:black;
+    }
+    h2{
+        text-align: center;
+        color: white;
+    }
+    main {
+        text-align: center;
+    }
+    
