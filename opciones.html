@@ -8,27 +8,37 @@
     <title>HOME</title>
 </head>
 <body>
-    <header>
         <div><h2>TRANS-LAB</h2></div>
-        <nav>
-                <ul>
-                    <li><a href="saldo.html">VER SALDO</a></li>
-                    <li><a href="tarifa.html">CALCULAR TARIFA</a></li>
-                    <li><a href="perfil.html">PERFIL</a></li>
-                    <li><a href="faq.html">PREGUNTAS FRECUENTES</a></li>
+        <nav class = 'navbar'>
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width='30' height='30'>
+                        <path d='M0,5 30,5' stroke='#fff' stroke-width='5'/>
+                        <path d='M0,14 30,14' stroke='#fff' stroke-width='5'/>
+                        <path d='M0,23 30,23' stroke='#fff' stroke-width='5'/>
+                    </svg>
+                </a>
+            </span>
+                <ul class='navbar-nav'>
+                    <li><a href="saldo.html">ver saldo</a></li>
+                    <li><a href="tarifa.html">calcular tarifa</a></li>
+                    <li><a href="perfil.html">perfil</a></li>
+                    <li><a href="faq.html">preguntas frecuentes</a></li>
+                    <li><a href="opciones.html">home</a></li>
                 </ul>
-            </nav>
-    </header>
-    <main>
-        <div><a href="saldo.html">VER SALDO</a></div>
-        <br>
-        <div><a href="tarifa.html">CALCULAR TARIFA</a></div>
-        <br>
-        <div><a href="perfil.html">PERFIL</a></div>
-        <br>
-        <div><a href="faq.html">PREGUNTAS FRECUENTES</a></div>
-        <br>
-    </main>
+        </nav>
+        <div id='side-menu' class='side-nav'>
+            <a href="#" class='btn-close' onclick="closeSlideMenu()">&times;</a>
+            <a href="saldo.html">VER SALDO</a>
+            <a href="tarifa.html">CALCULAR TARIFA</a>
+            <a href="perfil.html">PERFIL</a>
+            <a href="faq.html">PREGUNTAS FRECUENTES</a>
+            <a href="opciones.html">HOME</a>
+        </div>
+        <div id='main'>
+            <h3>HOME TRANS-LAB</h3>
+        </div>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
