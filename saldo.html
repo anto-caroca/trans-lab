@@ -8,6 +8,24 @@
     <title>Consulta Saldo</title>
 </head>
 <body>
+        <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width='30' height='30'>
+                        <path d='M0,5 30,5' stroke='#fff' stroke-width='5'/>
+                        <path d='M0,14 30,14' stroke='#fff' stroke-width='5'/>
+                        <path d='M0,23 30,23' stroke='#fff' stroke-width='5'/>
+                    </svg>
+                </a>
+            </span>
+            <div id='side-menu' class='side-nav'>
+                    <a href="#" class='btn-close' onclick="closeSlideMenu()">&times;</a>
+                    <a href="saldo.html">VER SALDO</a>
+                    <a href="tarifa.html">CALCULAR TARIFA</a>
+                    <a href="perfil.html">PERFIL</a>
+                    <a href="faq.html">PREGUNTAS FRECUENTES</a>
+                    <a href="opciones.html">HOME</a>
+                </div>
+                <h2>Conozca su saldo Bip!</h2>
     <div id="containerData">
         <input type="number" min="0" id="number" name="number" placeholder="ingrese su n° de Bip!"></input>
         <input type="button" id="btn-consultar-saldo"  value="consultar saldo">
