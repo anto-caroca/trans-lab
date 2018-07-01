@@ -15,24 +15,44 @@ let password= document.getElementById('password');
       }
     }
     
-      
-window.onload = () => {  
-      
-  const url =  'http://www.psep.cl/api/Bip.php?&numberBip=14760348';
-  const renderSaldo = document.getElementById("renderSaldo");
-  let storeBipBalance;
 
-async function fetchApi(){
-  const bip = await fetch(`${url}`)
-  const dataBip = await bip.json();
+//window.onload = () => {  
   
+  const renderBipBalance = document.getElementById("renderBipBalance");
+  let storeBipBalance;
+  const boton= document.getElementById("btn-consultar-saldo");
+
+boton.addEventListener("click", event=>{
+  let numBip = document.getElementById('number').value;
+
+  async function fetchBip(){
+  const bip = await fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${numBip}`)
+  const dataBip = await bip.json()
+  console.log(dataBip);
   let arrBip = Object.entries(dataBip)
   console.log(arrBip[2][1])
   storeBipBalance = arrBip[2][1];
-  renderSaldo.innerHTML = "su saldo es: "+storeBipBalance;
+  renderBipBalance.innerHTML = "su saldo es: "+storeBipBalance;
 
   }
-  fetchApi();
+  fetchBip();
 
-}
+})
 
+/*function validateTarifa(){
+
+const btnTarifa = document.getElementById("calcular-tarifa"); 
+let tarifa = document.getElementById('render-cost');
+let selectTarifa = document.getElementById('tarifa');
+
+  if(selectTarifa.selectedIndex = 0){
+    tarifa.innerHTML = storeBipBalance - 760;
+  }else if(selectTarifa.selectedIndex = 1){
+    tarifa.innerHTML = storeBipBalance - 680;
+  }else if(selectTarifa.selectedIndex = 2){
+    tarifa.innerHTML = storeBipBalance - 630;
+  }
+}*/
+      
+
+//}
