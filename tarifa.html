@@ -8,6 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+    <div id='price-section'>
+    <h3>Seleccione tarifa según horario</h3>
+    <select name="tarifa" id="tarifa">
+        <option value="760">Horario Alto: $760</option> 
+        <option value="680">Horario Medio: $680</option>
+        <option value="630">Horario Bajo: $630</option>
+    </select>
+    <input type="button" id='calcular-tarifa' value="calcular">
+    </div>
+    <div id='show-cost'>
+        <p id='render-cost'></p>
+    </div>
         <script src="js/main.js"></script>
 </body>
 </html>
