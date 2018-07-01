@@ -6,6 +6,7 @@
     color: white;
     font-weight:bold;
 }
+
 input {
     background-color: white;
     color: black
@@ -27,25 +28,78 @@ a:link, a:visited{
 a:hover{
     color:black;
 }
-nav ul{
-    list-style-type:none;
-    padding:0;
-}
-nav li{
-    display:inline;
-}
+
 nav a:link, nav a:visited{
     background-color:orange;
     color:white;
-    display:inline-block;
-    width:50%;
-    padding:10px 0;
 }
 nav a:hover{
     background-color:black;
 }
 
+
+.navbar{
+    background-color: orange;
+    overflow: hidden;
+    height: 63px;
+}
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar ul{
+    padding: 8px 0 0 0;
+    list-style-type: none;
+    margin-left: 250px;
+}
+.navbar a:hover{
+    background-color:black;
+}
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index:1;
+    top:25;
+    left:0;
+    background-color:orange;
+    opacity: 0.9;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.side-nav a{
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.side-nav a:hover{
+    color: orange;
+}
+.side-nav .btn-close{
+    position: absolute;
+    top:0;
+    right: 22px;
+    font-size: 20px;
+    
+}
+#main{
+    transition: margin-left 0.5s;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+@media(max-width: 568px){
+    .navbar-nav{display: none}
+}
 #containerData, #price-section{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
